@@ -16,17 +16,6 @@ This repository contains a single-file implementation (`Code.py`) that demonstra
 - Performs basic validation and will report decoding errors when patterns don't match valid symbols.
 - Designed to be readable and modifiable — good for learning or as a minimal decoding engine for prototypes.
 - Checks and accounts for the False Positives and False Negatives.
----
-
-## Supported input formats
-
-The decoder expects one of the following simplified representations (preprocessed from an image or sensor):
-
-1. **Bit string** — a raw sequence like `"1011001110..."` where `1` represents a bar and `0` a space (you may need to normalize widths first).  
-2. **Width sequence** — a list of integers representing consecutive stripe widths, e.g. `[1,1,3,1,1,3,...]` where small numbers mean "narrow" and larger numbers mean "wide".  
-3. **Pre-parsed symbol patterns** — a list/sequence of narrow/wide flags already mapped per character.
-
-> Note: `Code.py` focuses on decoding logic. Preprocessing (image-to-pattern conversion) is out of scope but easy to add (OpenCV edge detection → run-length widths → normalization).
 
 ---
 
